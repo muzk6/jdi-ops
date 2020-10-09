@@ -8,7 +8,7 @@
  * 日志文件列表
  */
 route_get('/log/index', function () {
-    $files = glob(PATH_OPS_DATA . '/log/*.log');
+    $files = glob(PATH_OPS_LOG . '/*.log');
 
     // 时间倒序
     usort($files, function ($a, $b) {
@@ -62,7 +62,7 @@ route_get('/log/more', function () {
         panic('已经到顶啦');
     }
 
-    $fo = new \SplFileObject(PATH_OPS_DATA . "/log/{$file}", 'rb');
+    $fo = new \SplFileObject(PATH_OPS_LOG . "/{$file}", 'rb');
     if ($offset == -1) {
         $fo->seek(PHP_INT_MAX);
         $offset = $fo->key() - 1;

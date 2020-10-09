@@ -4,8 +4,6 @@
  * OPS 主页
  */
 
-const LOGIN_PASSWD = 'jdi-ops';
-
 route_middleware(function () {
     // 白名单以外直接 404
     if (!(svc_whitelist()->isSafeIp() || svc_whitelist()->isSafeCookie())) {
@@ -41,7 +39,7 @@ route_get('/index/login', function () {
  */
 route_post('/index/login', function () {
     $passwd = validate('post.passwd')->required()->get('密码');
-    if ($passwd !== LOGIN_PASSWD) {
+    if (!LOGIN_PASSWD || $passwd !== LOGIN_PASSWD) {
         return api_error('密码错误');
     }
 

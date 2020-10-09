@@ -72,7 +72,7 @@ class XHProfRuns_Default implements iXHProfRuns
     private $dir = '';
     private $suffix = 'xhprof';
 
-    public function __construct($dir = PATH_OPS_DATA . '/xhprof')
+    public function __construct($dir = PATH_OPS_XHPROF)
     {
 
         // if user hasn't passed a directory location,

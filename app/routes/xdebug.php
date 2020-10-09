@@ -55,7 +55,7 @@ route_get('/xdebug/listen', function () {
             'max_children' => 0,
         ];
 
-        $trace_conf_file = PATH_OPS_DATA . '/.tracerc';
+        $trace_conf_file = PATH_OPS_TRACE . '/.tracerc';
         if (file_exists($trace_conf_file)) {
             $trace_conf = array_merge($trace_conf, include($trace_conf_file));
 
@@ -93,7 +93,7 @@ route_post('/xdebug/listen', function () {
     $max_data = validate('post.max_data:i')->numeric()->get('Max Data ');
     $max_dhildren = validate('post.max_children:i')->numeric()->get('Max Children ');
 
-    $trace_conf_file = PATH_OPS_DATA . '/.tracerc';
+    $trace_conf_file = PATH_OPS_TRACE . '/.tracerc';
 
     $conf = [
         'url' => $url,

@@ -43,7 +43,6 @@
         </el-main>
     </el-container>
 </div>
-@include('xdebug/check_xdebug')
 <script>
     (() => {
         let form = {!! json_encode($trace_conf) !!}
