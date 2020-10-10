@@ -161,7 +161,7 @@ class XHProfRuns_Default implements iXHProfRuns
 
         if (is_dir($this->dir)) {
             $data = [];
-            $expire_days = config('xhprof.expire_days');
+            $expire_days = 3;
             $expire = strtotime("-{$expire_days} days");
 
             foreach ($files as $file) {
