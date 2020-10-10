@@ -23,7 +23,7 @@
                 <el-form-item label="用户ID" title="要监听的用户ID">
                     <el-input v-model="form.user_id"></el-input>
                 </el-form-item>
-                <el-form-item label="过期秒数(0即关闭)">
+                <el-form-item label="过期秒数">
                     <el-input v-model="form.expire_second"></el-input>
                 </el-form-item>
                 <el-form-item label="Max Depth">
@@ -37,7 +37,7 @@
                 </el-form-item>
                 <el-form-item>
                     <el-button type="primary" @click="onSubmit">保存</el-button>
-                    <el-button @click="onCancel">取消</el-button>
+                    <el-button @click="onClose">关闭</el-button>
                 </el-form-item>
             </el-form>
         </el-main>
@@ -73,9 +73,15 @@
                         }
                     }, 'json');
                 },
-                onCancel: function () {
-                    top.V_INSTANCE.$refs['menu'].activeIndex = '/xdebug/index';
-                    location.href = '/xdebug/index';
+                onClose: function () {
+                    $.post('/xdebug/close', data => {
+                        top.V_INSTANCE.$message({
+                            showClose: true,
+                            message: data.m,
+                            type: 'success'
+                        });
+                        location.reload();
+                    });
                 }
             }
         })

@@ -91,7 +91,7 @@ route_post('/xdebug/listen', function () {
     $expire_second = validate('post.expire_second:i')->numeric()->lte(600)->get('过期秒数');
     $max_depth = validate('post.max_depth:i')->numeric()->get('Max Depth ');
     $max_data = validate('post.max_data:i')->numeric()->get('Max Data ');
-    $max_dhildren = validate('post.max_children:i')->numeric()->get('Max Children ');
+    $max_children = validate('post.max_children:i')->numeric()->get('Max Children ');
 
     $trace_conf_file = PATH_OPS_TRACE . '/.tracerc';
 
@@ -103,11 +103,20 @@ route_post('/xdebug/listen', function () {
         'expire_second' => $expire_second,
         'max_depth' => $max_depth,
         'max_data' => $max_data,
-        'max_children' => $max_dhildren,
+        'max_children' => $max_children,
     ];
 
-    file_put_contents($trace_conf_file,
-        "<?php\nreturn " . var_export($conf, true) . ";\n");
+    file_put_contents($trace_conf_file, "<?php\nreturn " . var_export($conf, true) . ";\n");
 
     return api_success('监听开启');
+});
+
+/**
+ * 关闭监听
+ */
+route_post('/xdebug/close', function () {
+    $trace_conf_file = PATH_OPS_TRACE . '/.tracerc';
+    is_file($trace_conf_file) && unlink($trace_conf_file);
+
+    return api_success('监听关闭');
 });

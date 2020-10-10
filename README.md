@@ -1,6 +1,8 @@
 # jdi-ops
 > JDI 框架的 OPS 运维后台，用于运维监控与开发调试，包括 日志、调试、性能分析
 
+## 起步
+
 - `git clone https://github.com/muzk6/jdi-ops.git` 克隆项目
 - 复制 `env.example.php` 为 `env.php`, 配置里面的常量
 - 配置入口目录为 `public/` 的 http 服务，参考下面 Nginx 配置：
@@ -24,3 +26,12 @@ server {
     }
 }
 ```
+
+## 依赖
+
+### XHProf
+
+GUI - View Full Callgraph 功能，需要安装 `graphviz`
+
+- Ubuntu: `sudo apt install graphviz`
+- CentOS: `yum install graphviz`
