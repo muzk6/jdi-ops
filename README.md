@@ -4,7 +4,7 @@
 ## 起步
 
 - `git clone https://github.com/muzk6/jdi-ops.git` 克隆项目
-- `composer install --no-dev` 安装依赖
+- `composer install --no-dev` 进去项目目录安装依赖
 - 复制 `env.example.php` 为 `env.php`, 配置里面的常量
 - 配置入口目录为 `public/` 的 http 服务，参考下面 Nginx 配置：
 

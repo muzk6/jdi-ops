@@ -1,0 +1,69 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "9a38d431b748c31d7db54dfae587503b",
+    "packages": [
+        {
+            "name": "muzk6/jdi",
+            "version": "v1.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/muzk6/jdi.git",
+                "reference": "66e9ae090e588620fc427814f6ece3c25ed1f183"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/muzk6/jdi/zipball/66e9ae090e588620fc427814f6ece3c25ed1f183",
+                "reference": "66e9ae090e588620fc427814f6ece3c25ed1f183",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^7.1"
+            },
+            "suggest": {
+                "ext-pcntl": "Required to use the Pcntl",
+                "ext-pdo": "Required to use the PDO MySql",
+                "ext-redis": "Required to use the Redis",
+                "ext-xdebug": "Required to use the Xdebug",
+                "php-amqplib/php-amqplib:^2.9": "Required to use the Message Queue",
+                "phpunit/phpunit": "Required to use the Unit testing",
+                "tideways_xhprof": "Required to use the tideways_xhprof"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/Support/helpers.php",
+                    "src/Support/services.php"
+                ],
+                "psr-4": {
+                    "JDI\\": "src/",
+                    "JDI\\Tests\\": "tests/phpunit/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "muzk6",
+                    "email": "muzk6x@gmail.com"
+                }
+            ],
+            "description": "PHP Framework",
+            "time": "2020-10-16T13:49:44+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
