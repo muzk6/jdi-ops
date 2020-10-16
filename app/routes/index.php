@@ -40,12 +40,12 @@ route_get('/index/login', function () {
 route_post('/index/login', function () {
     $passwd = validate('post.passwd')->required()->get('密码');
     if (!LOGIN_PASSWD || $passwd !== LOGIN_PASSWD) {
-        return api_error('密码错误');
+        panic('密码错误');
     }
 
     svc_auth()->login('ops');
 
-    return api_success();
+    return [];
 });
 
 /**

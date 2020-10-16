@@ -108,7 +108,7 @@ route_post('/xdebug/listen', function () {
 
     file_put_contents($trace_conf_file, "<?php\nreturn " . var_export($conf, true) . ";\n");
 
-    return api_success('监听开启');
+    return api_msg('监听开启');
 });
 
 /**
@@ -118,5 +118,5 @@ route_post('/xdebug/close', function () {
     $trace_conf_file = PATH_OPS_TRACE . '/.tracerc';
     is_file($trace_conf_file) && unlink($trace_conf_file);
 
-    return api_success('监听关闭');
+    return api_msg('监听关闭');
 });
