@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "muzk6/jdi",
-            "version": "v1.2.2",
+            "version": "v1.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/muzk6/jdi.git",
-                "reference": "66e9ae090e588620fc427814f6ece3c25ed1f183"
+                "reference": "606e1728612cbce4a857f7ef05954a1ed85c4d68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/muzk6/jdi/zipball/66e9ae090e588620fc427814f6ece3c25ed1f183",
-                "reference": "66e9ae090e588620fc427814f6ece3c25ed1f183",
+                "url": "https://api.github.com/repos/muzk6/jdi/zipball/606e1728612cbce4a857f7ef05954a1ed85c4d68",
+                "reference": "606e1728612cbce4a857f7ef05954a1ed85c4d68",
                 "shasum": ""
             },
             "require": {
@@ -55,7 +55,7 @@
                 }
             ],
             "description": "PHP Framework",
-            "time": "2020-10-16T13:49:44+00:00"
+            "time": "2020-10-19T02:06:26+00:00"
         }
     ],
     "packages-dev": [],
