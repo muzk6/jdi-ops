@@ -38,7 +38,7 @@ route_get('/log/index', function () {
  * 日志页面
  */
 route_get('/log/content', function () {
-    $file = input('get.file');
+    $file = input('file');
     if (!$file) {
         redirect('/index.php');
     }
@@ -50,13 +50,13 @@ route_get('/log/content', function () {
  * 更多日志内容，分页
  */
 route_get('/log/more', function () {
-    $file = input('get.file');
+    $file = input('file');
     if (!$file) {
         redirect('/index.php');
     }
 
-    $offset = input('get.offset:i', -1); // -1.最后一行; -2.已经超过文件顶部，即没有内容
-    $limit = input('get.limit:i', 10);
+    $offset = input('offset:i', -1); // -1.最后一行; -2.已经超过文件顶部，即没有内容
+    $limit = input('limit:i', 10);
 
     if ($offset == -2) {
         panic('已经到顶啦');

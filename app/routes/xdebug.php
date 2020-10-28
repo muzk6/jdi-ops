@@ -85,13 +85,13 @@ route_get('/xdebug/listen', function () {
  * 监听设置
  */
 route_post('/xdebug/listen', function () {
-    $url = validate('post.url')->required()->get('URL ');
-    $name = input('post.name');
-    $user_id = input('post.user_id');
-    $expire_second = validate('post.expire_second:i')->numeric()->lte(600)->get('过期秒数');
-    $max_depth = validate('post.max_depth:i')->numeric()->get('Max Depth ');
-    $max_data = validate('post.max_data:i')->numeric()->get('Max Data ');
-    $max_children = validate('post.max_children:i')->numeric()->get('Max Children ');
+    $url = validate('url')->required()->get('URL ');
+    $name = input('name');
+    $user_id = input('user_id');
+    $expire_second = validate('expire_second:i')->numeric()->lte(600)->get('过期秒数');
+    $max_depth = validate('max_depth:i')->numeric()->get('Max Depth ');
+    $max_data = validate('max_data:i')->numeric()->get('Max Data ');
+    $max_children = validate('max_children:i')->numeric()->get('Max Children ');
 
     $trace_conf_file = PATH_OPS_TRACE . '/.tracerc';
 
