@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9a38d431b748c31d7db54dfae587503b",
+    "content-hash": "2119b0245549a10b5f9766bf784e3f72",
     "packages": [
         {
             "name": "muzk6/jdi",
-            "version": "v1.3.0",
+            "version": "v1.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/muzk6/jdi.git",
-                "reference": "f1de36da65ffd1177ab427125bfcc61aa2d5d2e4"
+                "reference": "22c606d31b594050a8b2bb4a28cbdbb4a8eac9a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/muzk6/jdi/zipball/f1de36da65ffd1177ab427125bfcc61aa2d5d2e4",
-                "reference": "f1de36da65ffd1177ab427125bfcc61aa2d5d2e4",
+                "url": "https://api.github.com/repos/muzk6/jdi/zipball/22c606d31b594050a8b2bb4a28cbdbb4a8eac9a8",
+                "reference": "22c606d31b594050a8b2bb4a28cbdbb4a8eac9a8",
                 "shasum": ""
             },
             "require": {
@@ -55,7 +55,7 @@
                 }
             ],
             "description": "PHP Framework",
-            "time": "2020-10-28T13:52:52+00:00"
+            "time": "2020-11-05T03:04:17+00:00"
         }
     ],
     "packages-dev": [],

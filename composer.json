@@ -1,5 +1,16 @@
 {
+    "name": "muzk6/jdi-ops",
+    "description": "The OPS website background base on JDI",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "muzk6",
+            "email": "muzk6x@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
     "require": {
-        "muzk6/jdi": "^1.0"
+        "muzk6/jdi": "^1.3"
     }
 }
