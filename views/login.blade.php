@@ -37,12 +37,12 @@
             methods: {
                 onSubmit: function () {
                     $.post('/index/login', this.form, (data) => {
-                        if (data.s) {
+                        if (data.state) {
                             location.href = '/';
                         } else {
                             this.$message({
                                 showClose: true,
-                                message: data.m,
+                                message: data.message,
                                 type: 'error'
                             });
                         }

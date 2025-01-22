@@ -57,17 +57,17 @@
                     this.fullscreenLoading = true;
                     $.getJSON('/log/more', {file, offset: this.offset, limit: this.limit}, data => {
                         this.fullscreenLoading = false;
-                        if (data.s) {
-                            this.preData = data.d.content + "\n" + this.preData;
+                        if (data.state) {
+                            this.preData = data.data.content + "\n" + this.preData;
                             if (this.offset == -1) {
                                 setTimeout(() => {
                                     this.$refs['preData'].scrollTop = this.$refs['preData'].scrollHeight;
                                 }, 500)
                             }
 
-                            this.offset = data.d.offset;
+                            this.offset = data.data.offset;
                         } else {
-                            this.errMsg = data.m;
+                            this.errMsg = data.message;
                             this.showErr = true;
                             this.offset = -2;
                             setTimeout(() => {

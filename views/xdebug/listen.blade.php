@@ -56,10 +56,10 @@
             methods: {
                 onSubmit: function () {
                     $.post('/xdebug/listen', this.form, (data) => {
-                        if (data.s) {
+                        if (data.state) {
                             top.V_INSTANCE.$message({
                                 showClose: true,
-                                message: data.m,
+                                message: data.message,
                                 type: 'success'
                             });
                             top.V_INSTANCE.$refs['menu'].activeIndex = '/xdebug/index';
@@ -67,7 +67,7 @@
                         } else {
                             top.V_INSTANCE.$message({
                                 showClose: true,
-                                message: data.m,
+                                message: data.message,
                                 type: 'error'
                             });
                         }
@@ -77,7 +77,7 @@
                     $.post('/xdebug/close', data => {
                         top.V_INSTANCE.$message({
                             showClose: true,
-                            message: data.m,
+                            message: data.message,
                             type: 'success'
                         });
                         location.reload();

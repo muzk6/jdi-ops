@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1681a3204e9fc7f40aa3b92f8e65ef4c",
+    "content-hash": "cb0b8e07500af319d9e3831e8dd39b1b",
     "packages": [
         {
             "name": "muzk6/jdi",
-            "version": "v1.5.1",
+            "version": "v1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/muzk6/jdi.git",
-                "reference": "5681782b2ae41321103bb5608c26afcb6c1f673b"
+                "reference": "05d66214ef094fb3dc0e73b798b4a9b4226d3319"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/muzk6/jdi/zipball/5681782b2ae41321103bb5608c26afcb6c1f673b",
-                "reference": "5681782b2ae41321103bb5608c26afcb6c1f673b",
+                "url": "https://api.github.com/repos/muzk6/jdi/zipball/05d66214ef094fb3dc0e73b798b4a9b4226d3319",
+                "reference": "05d66214ef094fb3dc0e73b798b4a9b4226d3319",
                 "shasum": ""
             },
             "require": {
@@ -55,7 +55,11 @@
                 }
             ],
             "description": "PHP Framework",
-            "time": "2020-11-09T03:45:09+00:00"
+            "support": {
+                "issues": "https://github.com/muzk6/jdi/issues",
+                "source": "https://github.com/muzk6/jdi/tree/v1.7.0"
+            },
+            "time": "2025-01-22T08:29:36+00:00"
         }
     ],
     "packages-dev": [],
@@ -65,5 +69,6 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
 }

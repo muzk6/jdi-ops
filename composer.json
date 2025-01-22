@@ -12,5 +12,11 @@
     "minimum-stability": "stable",
     "require": {
         "muzk6/jdi": "^1.3"
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.org"
+        }
     }
 }
