@@ -15,7 +15,7 @@ server {
     root /www/jdi-ops/public;
 
     location / {
-        try_files $uri $uri/ /index.php$is_args$args;
+        try_files $uri /index.php$is_args$args;
     }
 
     location ~ \.php$ {
